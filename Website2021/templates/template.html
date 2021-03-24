@@ -2,16 +2,32 @@
 <html>
    <head>
       <title>Template</title>
+      <link rel='icon' href="/static/img/ico/favicon.ico"</>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+      <script src="https://kit.fontawesome.com/7344392da2.js" crossorigin="anonymous"></script>
    </head>
+   <div class = "allfont">
       <body>
          <ul>
             <nav>
                <!-- Creates the links for the nav bar -->
                <li><a href="{{ url_for('home') }}">Home</a></li>
+
             </nav>
          </ul>
       </body>
       {% block body %}
       {% endblock %}
-
+      <footer>
+         <p class="copy_right text-center">
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ben Shand</a>
+         </p>
+         <div class = 'icons'>
+            <a href="https://www.instagram.com/fruit "target="_blank" ><i class='fab fa-instagram-square' ></i></a>
+            <a href="https://twitter.com/fruit "target="_blank" ><i class='fab fa-twitter-square' ></i></a>
+            <a href="https://www.facebook.com/fruit "target="_blank" ><i class='fab fa-facebook-square' ></i></a>
+         </div>
+       </div>
+    </footer>
 </html>

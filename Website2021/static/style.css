@@ -1,0 +1,250 @@
+/* Imports all fonts needed */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=PT+Sans&display=swap");
+
+
+@font-face {
+  font-family: 'EquitanSans';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+.equitansans {
+    font-family: "EquitanSans",cursive;
+}
+
+
+.allfont {
+    font-family: "PT Sans", cursive;
+}
+
+/* This is to style my icons */
+.icons {
+    outline: none;
+    font-size: 30px;
+    color: black;
+}
+/* Styles all the banners */
+.image_banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* This is to style captions under images */
+.under_image {
+    text-align: center;
+}
+
+/* Creates space above each fruit image on the "Our Products " page */
+.top_padding {
+    padding-top: 60px;
+}
+
+/* Styles paragraphs on each separate recipe */
+.related_recipes {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+/* This is to style my images of fruit on their separate pages */
+.img_align {
+    float: right;
+    padding-right: 30px;
+    padding-top: 30px;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+/* This is used to align most of the paragraphs to the left */
+.align_left {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    padding-top: 30px;
+    padding-left: 250px;
+}
+
+/* Styles recipe ingredients,method and preparation time */
+.recipe_paragraph {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    padding-right: 500px;
+    bottom: 430px;
+
+    /* Styles recipe images */
+}
+.recipe_image {
+    position: static;
+    padding-left: 400px;
+}
+.searchbar {
+    display: inline-block;
+    width: 300px;
+    padding-left: 250px;
+    font-size: 25px;
+}
+
+/* Used to anything perfectly to the right */
+.align_right {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: right;
+    padding-right: 100px;
+}
+
+/* This is used to turn the images into a list rather than a mess */
+.item {
+    display: block;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Style for a unique paragraph */
+.para {
+    width: 500px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* CSS for prices on the separate fruit pages */
+.price {
+    text-align: left;
+    font-size: 40px;
+}
+
+/* Grabs color */
+a {
+    color: inherit;
+}
+
+/* Style for a unique paragraph */
+.paragraph {
+    font-size: 100;
+    text-align: center;
+}
+
+/* Styles text to middle */
+.middle {
+    text-align: center;
+    padding: 65px 200px;
+}
+
+/* Aligns text / removes underline */
+.align {
+    text-align: center;
+}
+/* Styles text to mid */
+.mid {
+    text-align: center;
+    padding-bottom: 30px;
+    width: auto;
+}
+/* Aligns to right */
+.left {
+    text-align: left;
+    font-size: 35px;
+}
+
+/* Aligns to center */
+.top_bottom {
+    text-align: center;
+}
+
+.ourproducts {
+    margin: auto;
+    width: 75%;
+    text-align: left;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: right;
+    width: 33.33%;
+    padding: 20px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* classifies font for the nav bar */
+nav {
+    font-family: "PT Sans", cursive;
+}
+
+/* Styles nav bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #282729;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+/* Styles background color for website */
+body {
+    background-color: #ebe5d5;
+}
+
+title {
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+footer {
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/* Removes underlines for everything using a <a> or <u> tag */
+a,u{
+    text-decoration: none;
+}
+
+/* Creates image gallery*/
+div.gallery {
+    margin: 10px;
+    float: left;
+    width: 400px;
+    height: auto;
+}
+
+/* Styles size of each image*/
+div.gallery img {
+    width: 100%;
+    height: 400px;
+}
+/* Styles description under images*/
+div.desc {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}

@@ -1,0 +1,4 @@
+input::placeholder, textarea {
+  color: #ffff;
+  font-size: 0.875em;
+}
