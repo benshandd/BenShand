@@ -4,39 +4,53 @@ from flask import g
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
-        conn = sqlite3.connect('CreatePizza.db')
-        c = conn.cursor()
-        #query selects all
-        c.execute("SELECT * FROM Pizza ;")
-        fetch = c.fetchall()
-        conn.close()
-        return render_template("home.html", fetch=fetch)
+        return render_template("home.html")
 
-#route for about
+#route for about page
 @app.route("/about")
 def about():
     return render_template("about.html")
 
+@app.route("/our_stores")
+def our_stores():
+    return render_template("our_stores.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/terms_of_service")
+def terms_of_service():
+    return render_template("terms_of_service.html")
+
+
 @app.route("/shop")
 def shop():
-    return render_template("shop.html")
+        conn = sqlite3.connect('WhoCares.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM Products ORDER BY id;")
+        gg = c.fetchall()
+        conn.close()
+        return render_template("shop.html", gg=gg)
 
+
+@app.route('/products/<id>')
+def separate_products(id):
+        conn = sqlite3.connect('WhoCares.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM Products WHERE id=?;",(id,))
+        get_product = c.fetchone()
+        conn.close()
+        return render_template("separate_products.html", get_product=get_product)
+
+
+#route for sell page
 @app.route("/sell")
 def sell():
     return render_template("sell.html")
 
-@app.route('/hello/<int:id>')
-def single_discountbox(id):
-        conn = sqlite3.connect('AllFruitsDatabase.db')
-        c = conn.cursor()
-        #query selects all from Fruit table and grabs corelating information for the displayed discount box id
-        c.execute("SELECT * FROM DiscountBox WHERE id=?;",(id,))
-        discountboxes = c.fetchone()
-        conn.close()
-        return render_template("single_discountbox.html", discountboxes=discountboxes)
 
 #reroutes 404 errrors
 @app.errorhandler(404)

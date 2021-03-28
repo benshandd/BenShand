@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% block head %}
    <head>
       <title>Template</title>
       <link rel='icon' href="/static/img/ico/favicon.ico"</>
@@ -7,29 +8,49 @@
        <!-- Icons at bottom-->
       <script src="https://kit.fontawesome.com/7344392da2.js" crossorigin="anonymous"></script>
    </head>
-   <div class = "allfont">
+   {% endblock %}
+     {% block nav %}
       <body>
-         <ul>
-            <nav>
+        <div class="font">
+         <div class = "style_navbar">
                <!-- Creates the links for the nav bar -->
-               <li><a href="{{ url_for('home') }}">Home</a></li>
-               <li><a href="{{ url_for('about') }}">About</a></li>
                <li><a href="{{ url_for('shop') }}">Shop</a></li>
                <li><a href="{{ url_for('sell') }}">Sell</a></li>
+               <li><a href="{{ url_for('about') }}">About</a></li>
+               <li><a href="{{ url_for('home') }}">Home</a></li>
+             </div>
             </nav>
-         </ul>
       </body>
+      {% endblock %}
       {% block body %}
       {% endblock %}
+      {% block footer %}
+
+            <!-- Creates the links for the nav bar -->
+<div class="footer_pad">
+  <a href="{{ url_for('sell') }}">SELL</a><br>
+        <a href="{{ url_for('our_stores') }}">OUR STORES</a><br>
+        <a href="{{ url_for('contact') }}">CONTACT</a><br>
+        <a href="{{ url_for('terms_of_service') }}">TERMS OF SERVICE</a><br>
+        <div class="social_pad">
+          
+          <a href="https://www.instagram.com/"target="_blank">INSTAGRAM</a><br>
+          <a href="https://www.facebook.com/"target="_blank">FACEBOOK</a><br>
+        </div>
+</div>
       <footer>
          <p class="copy_right text-center">
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ben Shand</a>
          </p>
          <div class = 'icons'>
+           <div class = 'font_nav'>
             <a href="https://www.instagram.com/fruit "target="_blank" ><i class='fab fa-instagram-square' ></i></a>
             <a href="https://twitter.com/fruit "target="_blank" ><i class='fab fa-twitter-square' ></i></a>
             <a href="https://www.facebook.com/fruit "target="_blank" ><i class='fab fa-facebook-square' ></i></a>
-         </div>
-       </div>
+                 </div>
+                            </div>
+                            </div>
+       {% endblock %}
     </footer>
+
 </html>

@@ -4,25 +4,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=PT+Sans&display=swap");
 
 @font-face {
-    font-family: "EquitanSans";
-    src: url('./fonts/EquitanSans-Bold.otf') format('embedded-opentype'), /* Internet Explorer */
-         url('./fonts/EquitanSans-Bold.otf') format('woff2'), /* Super Modern Browsers */
-         url('./fonts/EquitanSans-Bold.otf') format('woff'), /* Pretty Modern Browsers */
-         url('./fonts/EquitanSans-Bold.otf')  format('truetype'), /* Safari, Android, iOS */
-         url('./fonts/EquitanSans-Bold.otf') format('svg'); /* Legacy iOS */
+    font-family: "BraziliaSevenCGRegular";
+    src: url('./fonts/BraziliaSevenCGRegular.otf') format('embedded-opentype'), /* Internet Explorer */
+         url('./fonts/BraziliaSevenCGRegular.otf') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/BraziliaSevenCGRegular.otf') format('woff'), /* Pretty Modern Browsers */
+         url('./fonts/BraziliaSevenCGRegular.otf')  format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/BraziliaSevenCGRegular.otf') format('svg'); /* Legacy iOS */
 }
 
-.allfont {
-    font-family: "EquitanSans", ;
-    letter-spacing: 0.8px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.contactus {
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    padding: 35px;
-    font-size: 50px;
+.footer_pad {
+  width: auto;
+    border: 5px solid red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.social_pad {
+  border: 5px solid red;
+width: 30px;
+}
+
+.center {
+text-align:center;
+}
+
+
+.body_padding {
+  width: auto;
+    border: 5px solid red;
+    padding: 50px;
+    margin: 20px;
+}
+
+.home_title {
+  padding-top: 0;
+text-align: center;
+  letter-spacing: 30px;
+    font-size: 220px;
+
 }
 
 /* This is to style my icons */
@@ -31,225 +56,64 @@
     font-size: 30px;
     color: black;
 }
-/* Styles all the banners */
-.image_banner {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* This is to style captions under images */
-.under_image {
-    text-align: center;
-}
-
-/* Creates space above each fruit image on the "Our Products " page */
-.top_padding {
-    padding-top: 60px;
-}
-
-/* Styles paragraphs on each separate recipe */
-.related_recipes {
-    max-width: 200px;
-    max-height: 100px;
-}
-
-/* This is to style my images of fruit on their separate pages */
-.img_align {
-    float: right;
-    padding-right: 30px;
-    padding-top: 30px;
-    max-height: 500px;
-    max-width: 500px;
-}
-
-/* This is used to align most of the paragraphs to the left */
-.align_left {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 250px;
-    padding-top: 30px;
-    padding-left: 250px;
-}
-
-/* Styles recipe ingredients,method and preparation time */
-.recipe_paragraph {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 300px;
-    padding-right: 500px;
-    bottom: 430px;
-
-    /* Styles recipe images */
-}
-.recipe_image {
-    position: static;
-    padding-left: 400px;
-}
-.searchbar {
-    display: inline-block;
-    width: 300px;
-    padding-left: 250px;
-    font-size: 25px;
-}
-
-/* Used to anything perfectly to the right */
-.align_right {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    text-align: right;
-    padding-right: 100px;
-}
-
-/* This is used to turn the images into a list rather than a mess */
-.item {
-    display: block;
-    margin: 0 auto;
-    text-align: justify;
-}
-
-/* Style for a unique paragraph */
-.para {
-    width: 500px;
-    text-align: left;
-    font-size: 20px;
-}
-
-/* CSS for prices on the separate fruit pages */
-.price {
-    text-align: left;
-    font-size: 40px;
-}
 
 /* Grabs color */
 a {
     color: inherit;
 }
-
-/* Style for a unique paragraph */
-.paragraph {
-    font-size: 100;
-    text-align: center;
-}
-
-/* Styles text to middle */
-.middle {
-    text-align: center;
-    padding: 65px 200px;
-}
-
-/* Aligns text / removes underline */
-.align {
-    text-align: center;
-}
-/* Styles text to mid */
-.mid {
-    text-align: center;
-    padding-bottom: 30px;
-    width: auto;
-}
-/* Aligns to right */
-.left {
-    text-align: left;
-    font-size: 35px;
-}
-
-/* Aligns to center */
-.top_bottom {
-    text-align: center;
-}
-
-.ourproducts {
-    margin: auto;
-    width: 75%;
-    text-align: left;
-}
-
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-    float: right;
-    width: 33.33%;
-    padding: 20px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
+/*fonts*/
 /* classifies font for the nav bar */
-nav {
-    font-family: "EquitanSans";
+.font{
+    font-family: 'BraziliaSevenCGRegular';
+}
+.font_title {
+    font-family: 'BraziliaSevenCGRegular';
+    font-size: 25px;
+}
+
+.font_footer {
+    font-family: 'BraziliaSevenCGRegular';
+    font-size: 17px;
+}
+.font_body {
+    font-family: 'BraziliaSevenCGRegular';
+    font-size: 17px;
 }
 
 /* Styles nav bar */
-ul {
+.style_navbar {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding-left: 50px;
+    padding-top: 30px;
     overflow: hidden;
-    background-color: #282729;
-    font-family: 'EquitanSans';
-    font-size: 18px;
+    font-family: 'BraziliaSevenCGRegular';
+    font-size: 25px;
 }
-
-/* Styles background color for website */
-body {
-    background-color: #ebe5d5;
-}
-
-title {
-    font-family: 'EquitanSans';
-    font-size: 17px;
-}
-
-footer {
-    font-family: 'EquitanSans';
-    font-size: 17px;
-}
-
 li {
     float: left;
 }
 
 li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 14px 20px;
+    padding: 20px 10px;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: black;
+    color: yellow;
+
 }
+
+
+/* Styles background color for website */
+body {
+    background-color: #FFFFFF;
+}
+
 
 /* Removes underlines for everything using a <a> or <u> tag */
 a,u{
     text-decoration: none;
-}
-
-/* Creates image gallery*/
-div.gallery {
-    margin: 10px;
-    float: left;
-    width: 400px;
-    height: auto;
-}
-
-/* Styles size of each image*/
-div.gallery img {
-    width: 100%;
-    height: 400px;
-}
-/* Styles description under images*/
-div.desc {
-    font-size: 30px;
-    padding: 10px;
-    text-align: center;
 }
