@@ -5,25 +5,29 @@
       <title>Shop</title>
       <meta charset="utf-8">
    </head>
-   <body>
    {% extends "template.html" %}
    {% block body %}
-   <div class= "font">
-      <h2>All of these boxes are at a discounted price, provides a week's
-          worth of seasonal organic fruit for approximately one to
-          two people depending on requirements. The range varies but always
-          includes staple fruit and vegetables as well as interesting seasonal
-          items.
-      </h2>
-   </div>
-   {%for get_product in gg%}
-<div class="gallery">
-<a href="/products/{{get_product[0]}}">
-  <div class="desc">{{ get_product[1] }}</div>
- <img src="{{ get_product[7] }}" width="600" height="400"></a>
-
-</div>
-   {%endfor%}
-   {% endblock %}
-</body>
+   <body>
+      <div class="body_padding">
+         <div class="font_body">
+            <h2>All of these boxes are at a discounted price, provides a week's
+               worth of seasonal organic fruit for approximately one to
+               two people depending on requirements. The range varies but always
+               includes staple fruit and vegetables as well as interesting seasonal
+               items.
+            </h2>
+            {%for get_product in gg%}
+            <div class="gallery">
+               <a href="/products/{{get_product[0]}}">
+                  <div class="desc">{{ get_product[1] }}</div>
+                  <img src="{{ get_product[7] }}" width="600" height="400">
+               </a>
+               {%endfor%}
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+   </body>
+   {%endblock %}
 </html>

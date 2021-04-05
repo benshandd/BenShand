@@ -2,6 +2,8 @@ import sqlite3
 from flask import Flask, render_template
 from flask import g
 
+
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -25,6 +27,13 @@ def contact():
 def terms_of_service():
     return render_template("terms_of_service.html")
 
+@app.route("/refund_policy")
+def refund_policy():
+    return render_template("refund_policy.html")
+
+@app.route("/work_with_us")
+def work_with_us():
+    return render_template("work_with_us.html")
 
 @app.route("/shop")
 def shop():

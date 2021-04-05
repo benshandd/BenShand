@@ -5,25 +5,14 @@
       <title>Sell</title>
       <meta charset="utf-8">
    </head>
-   <body>
    {% extends "template.html" %}
    {% block body %}
-   <div class= "font">
-      <h1>Sell </h1>
-   </div>
-      <h2>All of these boxes are at a discounted price, provides a week's
-          worth of seasonal organic fruit for approximately one to
-          two people depending on requirements. The range varies but always
-          includes staple fruit and vegetables as well as interesting seasonal
-          items.
-      </h2>
-   </div>
-   {%for discountboxes in gg%}
-<div class="gallery">
-<a href="/discountboxes/{{discountboxes[0]}}">
- <img src="{{ discountboxes[5] }}" width="600" height="400"></a>
-<div class="desc">{{ discountboxes[1] }}</div>
-</div>
-   {% endblock %}
-</body>
+   <body>
+      <div class="body_padding">
+      <div class="font_body">
+         <div class="center">
+         </div>
+      </div>
+   </body>
+   {%endblock %}
 </html>
