@@ -9,13 +9,20 @@
    {% block body %}
    <body>
       <div class="home_title">WHOCARES?</div>
+<div class="home_images">
+  <a href="{{ url_for('shop') }}">
+      <img src="/static/img/home/jackboy.png" width="500" height="800">
+    </a>
+    <a href="{{ url_for('sell') }}">
+                      <img src="/static/img/home/af1.jpeg" width="500" height="800"  >
+                      </div>
+                      </a>
 
        <div class="body_padding">
         <div class="font">
           <div class="center">
 
-            <img src="/static/img/home/jackboy.jpeg" width="500" height="600">
-                            <img src="/static/img/home/af1.jpeg" width="500" height="600"  >
+
 
 
       <h2>All Fruits is a NZ owned and operated family business, based in the
@@ -44,5 +51,4 @@
    </body>
 </div>
    {%endblock %}
-
 </html>

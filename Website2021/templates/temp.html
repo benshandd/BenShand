@@ -1,9 +1,19 @@
-         <ul>
-            <nav>
-               <!-- Creates the links for the nav bar -->
-               <li><a href="{{ url_for('home') }}">Home</a></li>
-               <li><a href="{{ url_for('about') }}">About</a></li>
-               <li><a href="{{ url_for('shop') }}">Shop</a></li>
-               <li><a href="{{ url_for('sell') }}">Sell</a></li>
-            </nav>
-         </ul>
+@app.route("/shop")
+def shop():
+        conn = sqlite3.connect('WhoCares.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM Products ORDER BY id;")
+        gg = c.fetchall()
+        conn.close()
+        return render_template("shop.html", gg=gg)
+
+
+@app.route('/products/<id>')
+def separate_products(id):
+        conn = sqlite3.connect('WhoCares.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM Products WHERE id=?;",(id,))
+        get_product = c.fetchone()
+        conn.close()
+        return render_template("separate_products.html",
+        get_product=get_product)

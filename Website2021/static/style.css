@@ -20,8 +20,12 @@ img {
 }
 
 .home_images{
-  column-rule-style: none;
-  column-count: 2;
+  text-align: center;
+}
+
+.home_images:hover {
+    webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(4px);
 }
 .footer_pad {
    column-rule-style: none;
