@@ -12,13 +12,6 @@
          url('./fonts/BraziliaSevenCGRegular.otf') format('svg'); /* Legacy iOS */
 }
 
-
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .home_images{
   text-align: center;
 }

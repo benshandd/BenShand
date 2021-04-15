@@ -18,7 +18,7 @@ class Products(db.Model):
 class Customer(db.Model):
   __tablename__ = 'Customer'
   id = db.Column(db.String, primary_key=True)
-  customer_name = db.Column(db.String(80), nullable=False)
+  customer_name = db.Column(db.String(80))
   customer_email = db.Column(db.Text(250))
   customer_phone = db.Column(db.Text(250))
 

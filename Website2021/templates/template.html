@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-{% block head %}
    <head>
       <title>Template</title>
       <link rel='icon' href="/static/img/ico/favicon.ico"</>
@@ -8,48 +7,14 @@
        <!-- Icons at bottom-->
       <script src="https://kit.fontawesome.com/7344392da2.js" crossorigin="anonymous"></script>
    </head>
-   {% endblock %}
-     {% block nav %}
-      <body>
-        <div class="font">
-         <div class = "style_navbar">
-               <!-- Creates the links for the nav bar -->
-               <li><a href="{{ url_for('shop') }}">Shop</a></li>
-               <li><a href="{{ url_for('sell') }}">Sell</a></li>
-               <li><a href="{{ url_for('about') }}">About</a></li>
-               <li><a href="{{ url_for('home') }}">Home</a></li>
-             </div>
-            </nav>
-      </body>
+
+   <body>
+   {% include 'nav.html' %}
+      {% block content%}
       {% endblock %}
-      {% block body %}
-      {% endblock %}
-      {% block footer %}
-            <!-- Creates the links for the nav bar -->
-<div class="footer_pad">
-  <a href="{{ url_for('sell') }}">SELL</a><br>
-        <a href="{{ url_for('our_stores') }}">OUR STORES</a><br>
-        <a href="{{ url_for('contact') }}">CONTACT</a><br>
-        <a href="{{ url_for('terms_of_service') }}">TERMS OF SERVICE</a><br>
-                <a href="{{ url_for('refund_policy') }}">REFUND POLICY</a><br>
-                <a href="{{ url_for('work_with_us') }}">WORK WITH US</a><br>
-          <a href="https://www.instagram.com/"target="_blank">INSTAGRAM</a><br>
-          <a href="https://www.facebook.com/"target="_blank">FACEBOOK</a><br>
-          <a href="https://www.wikipedia.com/"target="_blank">JOIN OUR NEWSLETTER</a><br>
-          <a href="signup_page">SIGN UP</a><br>
 
-</div>
-<div class = 'footer'>
-
-         <p class="copy_right text-center">
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ben Shand</a>
-         </p>
-         <div class = 'icons'>
-            <a href="https://www.instagram.com/fruit "target="_blank" ><i class='fab fa-instagram-square' ></i></a>
-            <a href="https://twitter.com/fruit "target="_blank" ><i class='fab fa-twitter-square' ></i></a>
-            <a href="https://www.facebook.com/fruit "target="_blank" ><i class='fab fa-facebook-square' ></i></a>
-                            </div>
-                            </div>
-       {% endblock %}
-
+    </body>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 </html>

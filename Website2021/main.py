@@ -6,12 +6,7 @@ app = Flask(__name__)
 app.config.from_object(Config)  # applying all config to app
 db = SQLAlchemy(app)
 
-# note: this import is NOT at the top of the code because
-# it can't be - models.py NEEDS 'db' to be initialised before
-# it can be imported, and db needs 'app' - so against normal
-# protocols (and PEP8), we do this import down here after
-# 'app' and then 'db' have been created.
-import models # moved to its own file - it didn't belong here
+import models
 
 @app.route("/")
 def home():
@@ -57,8 +52,8 @@ def shop():
 
 @app.route('/products/<id>')
 def separate_products(id):
-        product = models.Pizza.query.filter_by(id=id).first_or_404()
-        return render_template("separate_products.html")
+    sep= models.Products.query.filter_by(id=id).first_or_404()
+    return render_template('separate_products.html', sep=sep)
 
 
 #route for sell page

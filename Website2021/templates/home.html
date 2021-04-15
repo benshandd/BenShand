@@ -6,9 +6,9 @@
       <meta charset="utf-8">
    </head>
    {% extends "template.html" %}
-   {% block body %}
+   {% block content %}
    <body>
-      <div class="home_title">WHOCARES?</div>
+       {% include 'home_title.html' %}
 <div class="home_images">
   <a href="{{ url_for('shop') }}">
       <img src="/static/img/home/jackboy.png" width="500" height="800">
@@ -21,10 +21,6 @@
        <div class="body_padding">
         <div class="font">
           <div class="center">
-
-
-
-
       <h2>All Fruits is a NZ owned and operated family business, based in the
          Christchurch region. As a Fruit Wholesale Distribution, We have supplied
          Fresh Fruit to quality focused customers for generations. Specialising in
