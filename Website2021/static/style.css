@@ -11,15 +11,189 @@
          url('./fonts/BraziliaSevenCGRegular.otf')  format('truetype'), /* Safari, Android, iOS */
          url('./fonts/BraziliaSevenCGRegular.otf') format('svg'); /* Legacy iOS */
 }
+@font-face {
+    font-family: "AlergiaNormal";
+    src: url('./fonts/AlergiaNormal.otf') format('embedded-opentype'), /* Internet Explorer */
+         url('./fonts/AlergiaNormal.otf') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/AlergiaNormal.otf') format('woff'), /* Pretty Modern Browsers */
+         url('./fonts/AlergiaNormal.otf')  format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/AlergiaNormal.otf') format('svg'); /* Legacy iOS */
+}
 
 
+main, nav{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 8px;
+
+}
+nav{perspective: 800px; z-index: 999;}
+#main-navigation-container{
+    width: 100%;
+    background: #03596d;
+}
+.company-title{
+    float: left;
+}
+.company-title li a{
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+.navigation-items{
+    float: left;
+      font-family: 'BraziliaSevenCGRegular';
+      font-size: 25px;
+
+}
+.navigation-items>ul>li{
+    float: left;
+    height: 100%;
+    text-decoration: none;
+    list-style-type: none;
+}
+.navigation-items>ul>li>a{
+    line-height: 3rem;
+    display: inline-block;
+    padding: 0 1rem;
+
+}
+
+.submenu-container{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #f2f2f2;
+    border: 1px solid #cecece;
+    border-top: none;
+    padding: 1rem;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+
+    transform: rotateY(180deg);
+    transform-origin: top;
+    transition: .4s opacity ease, .4s transform cubic-bezier(0.902, 0.149, 0.22, 0.934);
+
+}
+
+.navigation-items>ul>li:hover>a+.submenu-container{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1002;
+    transform: rotateY(0);
+}
+
+.navigation-items>ul>li:hover>a, .navigation-items>ul>li:focus>a{
 
 
+}
+.list{
+    float: left;
+    width: 20%;
+}
+.category-title h2{
+    color:#03596d;
+    display: inline-block;
+    margin: .5rem 0;
+    font-size: .9rem;
+      font-family: "AlergiaNormal";
+}
+.submenu li a{
+    font-size: .9rem;
+    line-height: 1.8;
+    color: #555;
+    font-family: "AlergiaNormal";
+}
+.submenu li a:hover{
+    color:#f7005f;
+    border-bottom: 1px dotted #03596d;
+
+}
 
 
+#main-navigation-container::after,
+#main-navigation-container::before{
+    content: '';
+    display: block;
+}
+#main-navigation-container::after{
+    clear: both;
+}
 
 
+/*Styling Content*/
+main{
+    padding: 1rem 0;
+    z-index: 100;
+}
+main section >h1{
+    margin: 1rem 0 ;
+}
+main section > p{
+    line-height: 1.6;
+}
 
+.shop_properties{
+
+}
+#search_properties{
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    padding-bottom: 15px;
+  font-family: 'AlergiaNormal';
+  background-color: white;
+  color: black;
+  padding-top: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  font-family: 'AlergiaNormal';
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: white}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+#subtitle{
+padding-top: 50px;
+}
 
 .image_left{
 float: right;
@@ -48,6 +222,7 @@ div.desc {
   line-height: 120%;
   padding: 15px;
   text-align: left;
+  font-family: 'AlergiaNormal';
 }
 
 
@@ -124,6 +299,7 @@ a {
 /* classifies font for the nav bar */
 .font{
     font-family: 'BraziliaSevenCGRegular';
+
 }
 .font_title {
     font-family: 'BraziliaSevenCGRegular';
@@ -144,23 +320,6 @@ a {
     font-family: 'BraziliaSevenCGRegular';
     font-size: 25px;
 }
-li {
-    float: left;
-}
-
-
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 20px 10px;
-}
-
-li a:hover {
-    background-color: black;
-    color: yellow;
-
-}
 
 
 /* Styles background color for website */
@@ -173,6 +332,12 @@ body {
  padding-left:  10px;
 }
 
+.styling_li{
+    float: left;
+}
+.nav_pad{
+    padding-right: 20px;
+}
 
 /* Removes underlines for everything using a <a> or <u> tag */
 a,u{

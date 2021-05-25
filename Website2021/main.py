@@ -11,43 +11,44 @@ import models
 @app.route("/")
 def home():
         return render_template("home.html")
-        page_title="HOME"
+
 
 #route for about page
 @app.route("/about")
 def about():
     return render_template("about.html")
-    page_title="ABOUT"
+
 
 @app.route("/our_stores")
 def our_stores():
     return render_template("our_stores.html")
-    page_title="OUR_STORES"
+
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-    page_title="CONTACT"
+
 
 @app.route("/terms_of_service")
 def terms_of_service():
     return render_template("terms_of_service.html")
-    page_title="TERMS_OF_SERVICE"
+
 
 @app.route("/refund_policy")
 def refund_policy():
     return render_template("refund_policy.html")
-    page_title="REFUND_POLICY"
+
 
 @app.route("/work_with_us")
 def work_with_us():
     return render_template("work_with_us.html")
-    page_title="WORK_WITH_US"
 
+#######################################
 @app.route("/shop")
 def shop():
     all_products = models.Products.query.order_by(models.Products.id).all()
     return render_template("shop.html",all_products=all_products)
+
 
 
 @app.route('/products/<id>')
@@ -61,6 +62,9 @@ def separate_products(id):
 def sell():
     return render_template("sell.html")
 
+@app.route("/search")
+def search():
+    return render_template("search.html")
 
 #reroutes 404 errrors
 @app.errorhandler(404)
