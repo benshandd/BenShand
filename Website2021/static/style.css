@@ -22,8 +22,9 @@
 
 
 main, nav{
-  none
+
     width: 100%;
+  width: 100%;
     position: relative;
     padding: none;
     margin: 0 auto;
@@ -40,6 +41,7 @@ nav{perspective: 800px; z-index: 999;}
     float: left;
       font-family: 'BraziliaSevenCGRegular';
       font-size: 25px;
+      padding-bottom: 10px;
 
 }
 .navigation-items>ul>li{
