@@ -20,29 +20,63 @@
          url('./fonts/AlergiaNormal.otf') format('svg'); /* Legacy iOS */
 }
 
-.container {
-       display: flex;
-       align-items: center;
-       justify-content: center
-     }
-     img {
-       max-width: 100%
-     }
-     .image {
-       flex-basis: 40%
-     }
-     .text {
-       font-size: 15px;
-       padding-left: 20px;
-       font-family:"AlergiaNormal";
-     }
+.post-thumb-left img {
+float: left;
+  max-width: 50%;
+    padding-top: 40px;
+    padding-right: 30px;
+}
+
+.post-content-left {
+    float:right;
+
+padding-left:200px;
+}
+
+.post-title-left{
+  text-align: left;
+  float: right;
+  padding-top: 70px;
+padding-right: 190px;
+    font-size: 17px;
+font-family:"AlergiaNormal";
+}
+
+
+
+
+.post-thumb-right img {
+float: right;
+  max-width: 50%;
+    padding-top: 60px;
+
+}
+
+.post-content-right {
+    float:left;
+    clear: left;
+padding-left:200px;
+}
+
+.post-title-right{
+
+  padding-top: 70px;
+padding-left: 30px;
+    font-size: 17px;
+font-family:"AlergiaNormal";
+float: left;
+clear: left;
+}
+
 .search_body{
 padding-bottom: 50px;
 }
 
 .search-container{
+  float: right;
+  clear: right;
+  padding-right: 100px;
   width: 300px;
-
   margin: 0 auto;
 }
 
