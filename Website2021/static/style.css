@@ -19,13 +19,64 @@
          url('./fonts/AlergiaNormal.otf')  format('truetype'), /* Safari, Android, iOS */
          url('./fonts/AlergiaNormal.otf') format('svg'); /* Legacy iOS */
 }
+
+.post-thumb-left img {
+float: left;
+  max-width: 50%;
+    padding-top: 40px;
+    padding-right: 30px;
+}
+
+.post-content-left {
+    float:right;
+
+padding-left:200px;
+}
+
+.post-title-left{
+  text-align: left;
+  float: right;
+  padding-top: 70px;
+padding-right: 190px;
+    font-size: 17px;
+font-family:"AlergiaNormal";
+}
+
+
+
+
+.post-thumb-right img {
+float: right;
+  max-width: 50%;
+    padding-top: 60px;
+
+}
+
+.post-content-right {
+    float:left;
+    clear: left;
+padding-left:200px;
+}
+
+.post-title-right{
+
+  padding-top: 70px;
+padding-left: 30px;
+    font-size: 17px;
+font-family:"AlergiaNormal";
+float: left;
+clear: left;
+}
+
 .search_body{
 padding-bottom: 50px;
 }
 
 .search-container{
+  float: right;
+  clear: right;
+  padding-right: 100px;
   width: 300px;
-
   margin: 0 auto;
 }
 
@@ -34,7 +85,7 @@ input#search-bar{
   padding-bottom: 50px;
   margin: 0 auto;
   width: 100%;
-  height: 45px;
+  height: 36px;
   padding: 0 20px;
   font-size: 1rem;
   border: 1px solid #D0CFCE;
@@ -61,9 +112,9 @@ input#search-bar{
 .search-icon{
   position: relative;
   float: right;
-  width: 75px;
-  height: 75px;
-  top: -62px;
+  width: 70px;
+  height: 70px;
+  top: -54px;
   right: -45px;
 }
 
@@ -115,8 +166,8 @@ nav{perspective: 800px; z-index: 999;}
     z-index: 1001;
     opacity: 0;
     visibility: hidden;
-
-
+padding-top: 22px;
+padding-left: 60px;
 
 }
 
@@ -132,17 +183,17 @@ nav{perspective: 800px; z-index: 999;}
 
 }
 .category-title h2{
-    color:#03596d;
+    color:black;
     display: inline-block;
     margin: .5rem 0;
     font-size: .9rem;
-      font-family: "AlergiaNormal";
+      font-family: "BraziliaSevenCGRegular";
 }
 .submenu li a{
     font-size: .9rem;
     line-height: 1.8;
 color: black;
-    font-family: "AlergiaNormal";
+    font-family: "BraziliaSevenCGRegular";
         text-decoration: none;
 }
 .submenu li a:hover{
@@ -230,11 +281,14 @@ main section > p{
 .show {display:block;}
 
 #subtitle{
-padding-top: 50px;
+
 }
 
+.caps{
+  text-transform:capitalize;
+}
 .image_left{
-float: right;
+
 }
 
 div.gallery {
