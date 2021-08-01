@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <script src="{{url_for('static', filename='filter.js')}}"></script>
+      <script src="{{url_for('static', filename='capital.js')}}"></script>
+      {% for all_brands in all_brands %}
+      <div class="caps">
+  <title> Shop {{ all_brands.brand }} </title>
+      </div>
+      {% endfor %}
+   </head>
+   {% extends "template.html" %}
+   {% block content %}
+   <body>
+      <div class="font">
+      <div id="subtitle">
+         <h1>SHOP
+         </h1>
+         <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category + </button>
+            <div id="myDropdown" class="dropdown-content">
+               {% for filter_tops in filter_tops %}
+               {% endfor %}
+               <a target="_blank" href="/shop">T-Shirts</a>
+               <a href="#">Shorts</a>
+               <a href="#">Pants</a>
+               <a href="#">Shirts</a>
+               <a href="#">Sweaters</a>
+               <a href="#">Outer Wear</a>
+               <a href="#">Accessories</a>
+            </div>
+         </div>
+         <div class="body_padding">
+            {% for all_brands in all_brands %}
+            <div class="gallery">
+               <a target="_blank" href="/products/{{ all_brands.id }}">
+                  <div class="change_image">
+                     <img src="{{ all_brands.image1 }}">
+                  </div>
+               </a>
+               <div class="caps">
+                  <div class="desc">
+                     {{ all_brands.brand }}<br>
+                     {{ all_brands.product_name }}<br>
+                     {{ all_brands.size }}<br>
+                     <b>{{ all_brands.price }}</b>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+   </body>
+   </div>
+   </div>
+   <div class="in_place">
+   {%endblock %}
+</html>
