@@ -1,53 +1,50 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <nav>
-
    <section class="navigation-items">
    <ul>
    <li>
       <a href="{{ url_for('shop') }}"">Shop<i class="fa fa-angle-down"></i></a>
       <section class="submenu-container">
-
          <div class="list">
             <a href="/shop/mens" class="category-title">
                <h2>Mens </h2>
             </a>
             <ul class="submenu">
-              <li><a href="#">T-Shirts</a></li>
-             <li><a href="#">Shirts</a></li>
-             <li><a href="#">Shorts</a></li>
-              <li><a href="#">Outer Wear</a></li>
-              <li><a href="#">Pants</a></li>
-              <li><a href="#">Accessories</a></li>
+               <li><a href="/shop/mens/t_shirts">T-Shirts</a></li>
+               <li><a href="/shop/mens/shirts">Shirts</a></li>
+               <li><a href="/shop/mens/shorts">Shorts</a></li>
+               <li><a href="/shop/mens/outer_wear">Outer Wear</a></li>
+               <li><a href="/shop/mens/pants">Pants</a></li>
+               <li><a href="/shop/mens/accessories">Accessories</a></li>
             </ul>
          </div>
          <div class="list">
-           <a href="/shop/womens" class="category-title">
-              <h2>Womens</h2>
-           </a>
-           <ul class="submenu">
-             <li><a href="#">T-Shirts</a></li>
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Shorts</a></li>
-             <li><a href="#">Outer Wear</a></li>
-             <li><a href="#">Pants</a></li>
-             <li><a href="#">Accessories</a></li>
+            <a href="/shop/womens" class="category-title">
+               <h2>Womens</h2>
+            </a>
+            <ul class="submenu">
+               <li><a href="/shop/womens/t_shirts">T-Shirts</a></li>
+               <li><a href="/shop/womens/shirts">Shirts</a></li>
+               <li><a href="/shop/womens/shorts">Shorts</a></li>
+               <li><a href="/shop/womens/outer_wear">Outer Wear</a></li>
+               <li><a href="/shop/womens/pants">Pants</a></li>
+               <li><a href="/shop/womens/accessories">Accessories</a></li>
             </ul>
          </div>
          <div class="list">
-           <a href="/shop/mens" class="category-title">
-              <h2>Shop by Brand</h2>
-           </a>
-           <ul class="submenu">
-             <li><a target="_blank" href="/shop/brands/polo">Ralph Lauren</a></li>
-    <li><a target="_blank" href="/shop/brands/amiri">Amiri</a></li>
-      <li><a target="_blank" href="/shop/brands/lacoste">Lacoste</a></li>
-             <li><a target="_blank" href="/shop/brands/volvo">Volvo</a></li>
-            <li><a target="_blank" href="/shop/brands/commesdesgarcons">Commes Des Garcons </a></li>
-      <li><a target="_blank" href="/shop/brands/beastmode">BeastMode</a></li>
+            <a href="/shop/mens" class="category-title">
+               <h2>Shop by Brand</h2>
+            </a>
+            <ul class="submenu">
+               <li><a target="_blank" href="/shop/brands/polo">Ralph Lauren</a></li>
+               <li><a target="_blank" href="/shop/brands/amiri">Amiri</a></li>
+               <li><a target="_blank" href="/shop/brands/lacoste">Lacoste</a></li>
+               <li><a target="_blank" href="/shop/brands/volvo">Volvo</a></li>
+               <li><a target="_blank" href="/shop/brands/commesdesgarcons">Commes Des Garcons </a></li>
+               <li><a target="_blank" href="/shop/brands/beastmode">BeastMode</a></li>
             </ul>
          </div>
-
       </section>
    </li>
 </nav>
@@ -60,7 +57,6 @@
       <a class="nav_pad" href="{{ url_for('about') }}">About</a>
       <a class="nav_pad" href="{{ url_for('home') }}">Home</a>
 </li>
-
 <div class="search_body">
 <form class="search-container">
 <input type="text" id="search-bar" placeholder="Enter a search term">

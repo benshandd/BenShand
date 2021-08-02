@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <script src="{{url_for('static', filename='filter.js')}}"></script>
+      <script src="{{url_for('static', filename='capital.js')}}"></script>
+      {% for product_type in product_type %}
+      <div class="caps">
+  <title> Shop {{ product_type.gender }} {{ product_type.product_type }} </title>
+      </div>
+      {% endfor %}
+   </head>
+   {% extends "template.html" %}
+   {% block content %}
+   <body>
+      <div class="font">
+      <div id="subtitle">
+         <h1>SHOP
+         </h1>
+         <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category + </button>
+            <div id="myDropdown" class="dropdown-content">
+               {% for filter_tops in filter_tops %}
+               {% endfor %}
+               <a target="_blank" href="/shop">T-Shirts</a>
+               <a href="#">Shorts</a>
+               <a href="#">Pants</a>
+               <a href="#">Shirts</a>
+               <a href="#">Sweaters</a>
+               <a href="#">Outer Wear</a>
+               <a href="#">Accessories</a>
+            </div>
+         </div>
+         <div class="body_padding">
+            {% for product_type in product_type %}
+            <div class="gallery">
+               <a target="_blank" href="/products/{{ product_type.id }}">
+                  <div class="change_image">
+                     <img src="{{ product_type.image1 }}">
+                  </div>
+               </a>
+               <div class="caps">
+                  <div class="desc">
+                     {{ product_type.brand }}<br>
+                     {{ product_type.product_name }}<br>
+                     {{ product_type.size }}<br>
+                     <b>{{ product_type.price }}</b>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+   </body>
+   </div>
+   </div>
+   <div class="in_place">
+   {%endblock %}
+</html>

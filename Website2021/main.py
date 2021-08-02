@@ -62,14 +62,13 @@ def shop():
 @app.route("/shop/mens")
 def mens_filter():
     mens_all = models.Products.query.order_by(models.Products.gender).filter_by(gender="mens").all()
-    #t_shirts  =
-    #shirts =
-    #shorts =
-    #outer_wear =
-    #pants =
-    #accessories =
     #filter_first = models.Products.query.filter_by(gender="mens").first()
     return render_template("mens_filter.html", mens_all=mens_all)
+
+@app.route('/shop/mens/<product_type>')
+def product_type_filter(product_type):
+    product_type= models.Products.query.order_by(models.Products.product_type).filter_by(product_type=product_type).filter_by(gender="mens").all()
+    return render_template('product_type_filter.html', product_type=product_type)
 
 @app.route("/shop/womens")
 def womens_shop_filter():
@@ -77,17 +76,19 @@ def womens_shop_filter():
     #filter_first = models.Products.query.filter_by(gender="mens").first()
     return render_template("womens_filter.html", womens_all=womens_all)
 
+@app.route('/shop/womens/<product_type>')
+def womens_product_type_filter(product_type):
+    product_type= models.Products.query.order_by(models.Products.product_type).filter_by(product_type=product_type).filter_by(gender="womens").all()
+    return render_template('product_type_filter.html', product_type=product_type)
+
+
+
+
 @app.route('/shop/brands/<brand>')
 def separate_brands(brand):
     all_brands= models.Products.query.filter_by(brand=brand).all()
     return render_template('separate_brands.html', all_brands=all_brands)
 
-
-
-@app.route("/shop/<string:filter_tshirts>")
-def filter_product_type(filter_tshirts):
-    filter_tshirts = models.Products.query.order_by(models.Products.product_type).filter_by(product_type="t-shirt").all()
-    return render_template("filter_product_type.html", filter_tshirts=filter_tshirts)
 
 
 #seprate products pages
