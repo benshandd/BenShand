@@ -128,3 +128,9 @@ def separate_products(id):
                  </div>
                  </div>
                  </div>
+
+
+                 add_review = (
+                   models.Reviews.query.order_by(models.Products.gender)
+                   .filter_by(comment=comment).first()
+                   )

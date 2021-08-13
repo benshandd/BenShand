@@ -42,3 +42,7 @@ class Reviews(db.Model):
   review_user_id = db.Column(db.String(80))
   associated_product = db.Column(db.String(80))
   comment = db.Column(db.Text(250))
+  star_rating = db.Column(db.Integer)
+
+  def __repr__(self):
+      return '<Comment %r>'%self.id

@@ -121,10 +121,11 @@ def separate_brands(brand):
 
 # seprate products pages
 @app.route("/products/<id>", methods=['GET','POST'])
-def separate_products(id,add_review):
+def separate_products(id):
     sep = models.Products.query.filter_by(id=id).first_or_404()
-    review = models.Reviews.query.filter_by(comment.add_review==id).first()
     return render_template("separate_products.html", sep=sep)
+
+
 
 
 # route for sell page
