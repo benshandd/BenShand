@@ -12,7 +12,7 @@
 {% extends "template.html" %}
   {% block content %}
    <div class= "font">
-     <!-- displays name for certain discountbox -->
+     <!-- displays name for certain product -->
           <h2>{{ sep.product_name }}</h2>
        </div>
        <div class="align">
@@ -20,15 +20,14 @@
              <img height="600" width="400" src="{{ sep.image1 }}">
           </div>
           <div class="recipe_paragraph">
-             <!-- gets ingredients list from database-->
+             <!-- gets description from database-->
              <h1>Description:</h1>
              <h3>{{ sep.description }}</h3>
-             <!-- gets method for recipe from database-->
+             <!-- gets price for recipe from database-->
              <h1>Price : </h1>
              <h3>{{ sep.price }}</h3>
 
 
-      <!-- displays name for certain discountbox -->
 
 
 
